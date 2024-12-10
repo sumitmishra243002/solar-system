@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar System</title>
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .solar-system {
+      position: relative;
+      width: 400px;
+      height: 400px;
+    }
+
+    .sun {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 50px;
+      height: 50px;
+      background: yellow;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 0 30px yellow;
+    }
+
+    .orbit {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      animation: rotate 10s linear infinite;
+    }
+
+    .planet {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 15px;
+      height: 15px;
+      background: red;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .orbit.mercury {
+      width: 80px;
+      height: 80px;
+      animation-duration: 4s;
+    }
+
+    .orbit.venus {
+      width: 120px;
+      height: 120px;
+      animation-duration: 6s;
+    }
+
+    .orbit.earth {
+      width: 160px;
+      height: 160px;
+      animation-duration: 8s;
+    }
+
+    .orbit.mars {
+      width: 200px;
+      height: 200px;
+      animation-duration: 10s;
+    }
+
+    .planet.mercury {
+      background: gray;
+    }
+
+    .planet.venus {
+      background: orange;
+    }
+
+    .planet.earth {
+      background: blue;
+    }
+
+    .planet.mars {
+      background: red;
+    }
+
+    @keyframes rotate {
+      from {
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+      to {
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="solar-system">
+    <div class="sun"></div>
+    <div class="orbit mercury">
+      <div class="planet mercury"></div>
+    </div>
+    <div class="orbit venus">
+      <div class="planet venus"></div>
+    </div>
+    <div class="orbit earth">
+      <div class="planet earth"></div>
+    </div>
+    <div class="orbit mars">
+      <div class="planet mars"></div>
+    </div>
+  </div>
+  <script>
+    // Example of adding interactivity or dynamic functionality
+    console.log("Welcome to the Solar System simulation!");
+  </script>
+</body>
+</html>
